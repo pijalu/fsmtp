@@ -127,7 +127,7 @@ func (s *Session) Data(r io.Reader) error {
 
 		// Only save files
 		if p.FileName() == "" {
-			log.Printf("Ignoring non-file mail !")
+			//log.Printf("Ignoring non-file mail !")
 			continue
 		}
 
