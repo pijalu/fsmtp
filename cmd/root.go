@@ -80,7 +80,6 @@ func init() {
 	rootCmd.PersistentFlags().IntVarP(&port, "port", "p", 2525, "Server port")
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.fsmtp.yaml)")
-	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
 // initConfig reads in config file and ENV variables if set.
