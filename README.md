@@ -6,8 +6,8 @@ A simple SMTP server that will save all the send mail files content to a given l
 `go get -u -v github.com/pijalu/fsmtp`
 
 ## Usage
-Usage:
-  fsmtp [flags]
+```
+fsmtp [flags]
 
 Flags:
   -a, --address string   Address to bind to (default "localhost")
@@ -15,7 +15,7 @@ Flags:
   -h, --help             help for fsmtp
   -o, --output string    Output location for the files (default ".")
   -p, --port int         Server port (default 2525)
-  -t, --toggle           Help message for toggle
+```
 
 ## Example
 ```sh 
