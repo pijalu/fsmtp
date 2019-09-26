@@ -159,8 +159,12 @@ func (s *Session) Data(r io.Reader) error {
 			p.FileName(),
 		)
 
+		// Use a temp file name
+		tempTargetName := fmt.Sprintf("%s.tmp",
+			targetName)
+
 		// Create
-		w, err := os.Create(targetName)
+		w, err := os.Create(tempTargetName)
 		if err != nil {
 			log.Fatal(err)
 			return err
@@ -173,6 +177,9 @@ func (s *Session) Data(r io.Reader) error {
 			log.Fatal(err)
 			return err
 		}
+
+		// Rename
+		os.Rename(tempTargetName, targetName)
 
 		// Log
 		log.Printf("Saved file %s [%d byte(s)]",
